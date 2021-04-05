@@ -5,6 +5,10 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+require('dotenv').config();
+
+const API_KEY = process.env.REACT_APP_API_KEY;
+console.log('KEY:', API_KEY);
 
 ReactDOM.render(
   <React.StrictMode>
