@@ -8,21 +8,22 @@ export const profileSlice = createSlice({
   initialState,
   reducers: {
     updateProfile: (state, action) => {
+      const data = action.payload[0];
       // eslint-disable-next-line no-param-reassign
-      state[action.payload.symbol] = action.payload;
+      state.data = data;
     },
   },
 });
 
+export const { updateProfile } = profileSlice.actions;
+
 export const refreshProfile = createAsyncThunk(
-  'stocks/updateStocks',
+  'profile/updateProfile',
   async (ticker) => {
     const response = await getProfile(ticker);
-    profileSlice.actions.updateProfile(response);
+    updateProfile(response);
     return response;
   },
 );
-
-export const { updateProfile } = profileSlice.actions;
 
 export default profileSlice.reducer;
