@@ -7,8 +7,8 @@ export const quoteRequest = (name) => new Request(
     method: 'GET'
   });
 
-export const quotesResquest = (group) => new Request(
-  `https://financialmodelingprep.com/api/v3/quotes/${group}?apikey=${process.env.ACT_APP_API_KEY}`,
+export const quotesRequest = (group) => new Request(
+  `https://financialmodelingprep.com/api/v3/quotes/${group}?apikey=${process.env.REACT_APP_API_KEY}`,
   {
     port: 443,
     method: 'GET'
