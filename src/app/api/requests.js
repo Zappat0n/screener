@@ -15,3 +15,11 @@ export const quotesRequest = (group) => new Request(
     method: 'GET',
   },
 );
+
+export const profileRequest = (name) => new Request(
+  `https://financialmodelingprep.com/api/v3/profile/${name}?apikey=${process.env.REACT_APP_API_KEY}`,
+  {
+    port: 443,
+    method: 'GET',
+  },
+);
