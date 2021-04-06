@@ -10,7 +10,6 @@ const Index = (props) => {
   return (
     <h4>
       {selectName}
-      {' '}
       :
       {selectPrice}
       {' '}

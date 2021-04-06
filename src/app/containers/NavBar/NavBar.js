@@ -7,7 +7,6 @@ import { refreshStocks, updateStocks } from '../../reducers/stockSlice';
 const NavBar = () => {
   const dispatch = useDispatch();
   const indexes = useSelector((state) => state.indexes);
-  console.log(Object.keys(indexes));
 
   return (
     <>
