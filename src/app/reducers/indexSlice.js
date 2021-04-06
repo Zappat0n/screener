@@ -12,6 +12,10 @@ export const indexSlice = createSlice({
   name: 'indexes',
   initialState,
   reducers: {
+    clearIndexes: (state) => {
+      // eslint-disable-next-line no-param-reassign
+      Object.keys(state).forEach((key) => delete state[key]);
+    },
     updateQuote: (state, action) => {
       // eslint-disable-next-line prefer-destructuring
       state[action.payload[0].symbol] = action.payload[0];
@@ -33,6 +37,6 @@ export const refreshIndexes = createAsyncThunk(
   },
 );
 
-export const { update, updateIndexes } = indexSlice.actions;
+export const { clearIndexes, updateQuote, updateIndexes } = indexSlice.actions;
 
 export default indexSlice.reducer;

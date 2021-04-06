@@ -9,6 +9,10 @@ export const stockSlice = createSlice({
   name: 'stocks',
   initialState,
   reducers: {
+    clearStocks: (state) => {
+      // eslint-disable-next-line no-param-reassign
+      Object.keys(state).forEach((key) => delete state[key]);
+    },
     updateStocks: (state, action) => {
       action.payload.forEach((stock) => {
         // eslint-disable-next-line no-param-reassign
@@ -27,6 +31,6 @@ export const refreshStocks = createAsyncThunk(
   },
 );
 
-export const { update, updateStocks } = stockSlice.actions;
+export const { clearStocks, updateStocks } = stockSlice.actions;
 
 export default stockSlice.reducer;

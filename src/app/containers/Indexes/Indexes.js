@@ -1,7 +1,7 @@
 import { unwrapResult } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
 import Index from '../Index/Index';
-import { refreshStocks, updateStocks } from '../../reducers/stockSlice';
+import { clearStocks, refreshStocks, updateStocks } from '../../reducers/stockSlice';
 import indexComponents from '../../data/components';
 
 const Indexes = () => {
@@ -10,6 +10,7 @@ const Indexes = () => {
 
   const handleQuery = (event, ticker) => {
     event.preventDefault();
+    dispatch(clearStocks());
     dispatch(refreshStocks(indexComponents[ticker].join(',')))
       .then(unwrapResult)
       .then((originalPromiseResult) => {
