@@ -5,17 +5,16 @@ async function query(request) {
     const response = await fetch(request);
     return response.json();
   } catch (error) {
-    console.log(error);
     return null;
   }
 }
 
 async function getQuote(ticker) {
-  return await query(quoteRequest(ticker));
-};
+  return query(quoteRequest(ticker));
+}
 
 async function getQuotes(ticker) {
-  return await query(quotesRequest(ticker));
-};
+  return query(quotesRequest(ticker));
+}
 
-export { getQuote, getQuotes }
+export { getQuote, getQuotes };
