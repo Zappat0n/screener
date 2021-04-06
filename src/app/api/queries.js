@@ -10,7 +10,9 @@ async function query(request) {
 }
 
 async function getQuote(ticker) {
-  return query(quoteRequest(ticker));
+  const request = quoteRequest(ticker);
+  console.log(request);
+  return query(request);
 }
 
 async function getQuotes(ticker) {
