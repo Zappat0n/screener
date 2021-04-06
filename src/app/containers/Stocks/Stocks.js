@@ -9,11 +9,11 @@ const Stocks = () => {
 
   const getProfile = (event, ticker) => {
     event.preventDefault();
-    dispatch(refreshProfile(ticker)
+    dispatch(refreshProfile(ticker))
       .then(unwrapResult)
       .then((originalPromiseResult) => {
         dispatch(updateProfile(originalPromiseResult));
-      }));
+      });
   };
 
   const createStocks = () => {

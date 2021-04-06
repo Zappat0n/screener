@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const Index = (props) => {
+const Stock = (props) => {
   const { ticker, handleClick } = props;
   const selectName = useSelector((state) => state.stocks[ticker].name);
   const selectPrice = useSelector((state) => state.stocks[ticker].price);
@@ -19,9 +19,9 @@ const Index = (props) => {
   );
 };
 
-Index.propTypes = {
+Stock.propTypes = {
   ticker: PropTypes.string.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
 
-export default Index;
+export default Stock;
