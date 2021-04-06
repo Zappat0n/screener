@@ -11,7 +11,6 @@ async function query(request) {
 
 async function getQuote(ticker) {
   const request = quoteRequest(ticker);
-  console.log(request);
   return query(request);
 }
 
