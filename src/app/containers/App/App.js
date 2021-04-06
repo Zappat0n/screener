@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
-import MainContainer from '../MainContainer/MainContainer';
+import Stocks from '../Stocks/Stocks';
 import Indexes from '../Indexes/Indexes';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Indexes />
-      <MainContainer />
+      <Stocks />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { unwrapResult } from '@reduxjs/toolkit';
 import Stock from '../Stock/Stock';
 import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
 
-const MainContainer = () => {
+const Stocks = () => {
   const components = useSelector((state) => state.stocks);
   const dispatch = useDispatch();
 
@@ -32,4 +32,4 @@ const MainContainer = () => {
   );
 };
 
-export default MainContainer;
+export default Stocks;
