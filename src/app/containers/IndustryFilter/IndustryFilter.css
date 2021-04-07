@@ -1,0 +1,9 @@
+.filter .content{
+  margin: 1rem;
+  float: right;
+  font: normal normal 700 0.8rem/0.8rem 'Open Sans', sans-serif;
+}
+
+.filter .content select {
+  font: normal normal 700 0.8rem/0.8rem 'Open Sans', sans-serif;
+}

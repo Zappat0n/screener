@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import './IndustryFilter.css';
 
 const IndustryFilter = (props) => {
   const { handleChange } = props;
@@ -16,17 +17,21 @@ const IndustryFilter = (props) => {
   createFilters();
 
   return (
-    <div className="mt">
-      <select
-        className="industry-filter"
-        onChange={(event) => handleChange(event.target.value)}
-      >
-        {filters.map((industry) => (
-          <option key={industry} value={industry}>
-            {industry}
-          </option>
-        ))}
-      </select>
+    <div className="filter">
+      <div className="content">
+        Industry:
+        {'  '}
+        <select
+          className="industry-filter"
+          onChange={(event) => handleChange(event.target.value)}
+        >
+          {filters.map((industry) => (
+            <option key={industry} value={industry}>
+              {industry}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };
