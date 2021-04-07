@@ -17,9 +17,11 @@
   width: 64px;
 }
 
-.profile .top h2, .profile .top h4 {
+.profile .top h2,
+.profile .top h4 {
   margin-left: 2rem;
 }
+
 .profile .top h5 {
   margin-left: 0.25rem;
 }

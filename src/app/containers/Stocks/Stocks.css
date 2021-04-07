@@ -1,8 +1,9 @@
-.stocks table{
+.stocks table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid lightgray;
   padding: 0.3rem 0.5rem;
 }
