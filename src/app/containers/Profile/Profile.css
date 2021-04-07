@@ -1,0 +1,53 @@
+.profile {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.profile .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile .top {
+  display: flex;
+  align-items: center;
+}
+
+.profile .top .logo {
+  width: 64px;
+}
+
+.profile .top h2, .profile .top h4 {
+  margin-left: 2rem;
+}
+.profile .top h5 {
+  margin-left: 0.25rem;
+}
+
+.profile .info {
+  width: 75%;
+}
+
+.priceData {
+  width: 60%;
+}
+
+.profile .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile .cell {
+  width: 100%;
+  margin: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.profile .info .cell {
+  justify-content: space-evenly;
+  border: none;
+  font-weight: 700;
+}
