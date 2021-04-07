@@ -15,22 +15,30 @@ const Stock = (props) => {
 
   const getColor = () => (data && data.changes < 0 ? 'colorRed' : 'colorBlue');
 
+  const getCell = (text) => (
+    <div
+      className="cell"
+      onClick={(event) => handleClick(event, ticker)}
+      onKeyPress={(event) => handleClick(event, ticker)}
+      role="presentation"
+    >
+      {text}
+    </div>
+  );
+
   return (
     <tr className="stock">
       <td>
-        {data.companyName}
+        {getCell(data.companyName)}
       </td>
-      <td className={`price ${getColor()}`}>
-        {data.price}
+      <td>
+        {getCell(data.price)}
       </td>
       <td className={`change ${getColor()}`}>
-        {getPercentage(data.changes, data.price)}
+        {getCell(getPercentage(data.changes, data.price))}
       </td>
       <td>
-        {data.industry}
-      </td>
-      <td>
-        <button type="button" onClick={(event) => handleClick(event, ticker)}>*</button>
+        {getCell(data.industry)}
       </td>
     </tr>
   );
