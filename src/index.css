@@ -15,3 +15,11 @@ body {
 .colorBlue {
   color: blue;
 }
+
+.dNone {
+  display: none;
+}
+
+.dFlex {
+  display: flex;
+}

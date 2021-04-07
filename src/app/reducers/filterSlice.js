@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { value: 'All' };
+const initialState = {
+  value: 'All',
+  stocksVisible: true,
+};
 
 export const filterSlice = createSlice({
   name: 'filter',
@@ -10,9 +13,13 @@ export const filterSlice = createSlice({
       // eslint-disable-next-line no-param-reassign
       state.value = action.payload;
     },
+    updateVisible: (state) => {
+      // eslint-disable-next-line no-param-reassign
+      state.stocksVisible = !state.stocksVisible;
+    },
   },
 });
 
-export const { updateFilter } = filterSlice.actions;
+export const { updateFilter, updateVisible } = filterSlice.actions;
 
 export default filterSlice.reducer;

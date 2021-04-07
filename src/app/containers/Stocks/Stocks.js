@@ -3,16 +3,17 @@ import { unwrapResult } from '@reduxjs/toolkit';
 import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
 import Stock from '../Stock/Stock';
 import IndustryFilter from '../IndustryFilter/IndustryFilter';
-import { updateFilter } from '../../reducers/filterSlice';
+import { updateFilter, updateVisible } from '../../reducers/filterSlice';
 import './Stocks.css';
 
 const Stocks = () => {
   const components = useSelector((state) => state.stocks);
-  const filter = useSelector((state) => state.filter.value);
+  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
 
   const getProfile = (event, ticker) => {
     event.preventDefault();
+    dispatch(updateVisible());
     dispatch(refreshProfile(ticker))
       .then(unwrapResult)
       .then((originalPromiseResult) => {
@@ -23,7 +24,7 @@ const Stocks = () => {
   const createStocks = () => {
     if (components) {
       return Object.keys(components).filter((quote) => (
-        components[quote].industry === filter || filter === 'All')).map(
+        components[quote].industry === filter.value || filter.value === 'All')).map(
         (quote) => <Stock key={quote} ticker={quote} handleClick={getProfile} />,
       );
     }
@@ -35,7 +36,7 @@ const Stocks = () => {
   };
 
   return (
-    <div className="stocks">
+    <div className={`stocks ${filter.stocksVisible ? 'dFlex' : 'dNone'}`}>
       <IndustryFilter handleChange={changeFilter} />
       <table>
         <thead>
