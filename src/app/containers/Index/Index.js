@@ -15,7 +15,7 @@ const Index = (props) => {
         onClick={(event) => handleClick(event, ticker)}
       >
         {selectName}
-        <div className={selectChange < 0 ? 'backgroundRed' : 'backgroundBlue'}>
+        <div className={selectChange < 0 ? 'colorRed' : 'colorBlue'}>
           {selectPrice}
           {' '}
           {selectChange}

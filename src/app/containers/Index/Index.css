@@ -20,11 +20,3 @@ button:hover {
   cursor: pointer;
   background: lightgray;
 }
-
-.backgroundRed {
-  color: red;
-}
-
-.backgroundBlue {
-  color: blue;
-}
