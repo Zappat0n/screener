@@ -1,8 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getQuote } from '../api/queries';
+import { getProfile } from '../api/queries';
 
 const initialState = {
-  AAPL: { name: 'Apple Inc.', price: '' },
 };
 
 export const stockSlice = createSlice({
@@ -25,8 +24,9 @@ export const stockSlice = createSlice({
 export const refreshStocks = createAsyncThunk(
   'stocks/updateStocks',
   async (ticker) => {
-    const response = await getQuote(ticker);
+    const response = await getProfile(ticker);
     stockSlice.actions.updateStocks(response);
+    console.log(response);
     return response;
   },
 );
