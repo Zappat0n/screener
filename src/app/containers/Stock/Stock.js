@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import './Stock.css';
 
 const Stock = (props) => {
   const { ticker, handleClick } = props;
@@ -12,15 +13,17 @@ const Stock = (props) => {
     return '';
   };
 
+  const getColor = () => (data && data.changes < 0 ? 'colorRed' : 'colorBlue');
+
   return (
-    <tr>
+    <tr className="stock">
       <td>
         {data.companyName}
       </td>
-      <td>
+      <td className={`price ${getColor()}`}>
         {data.price}
       </td>
-      <td>
+      <td className={`change ${getColor()}`}>
         {getPercentage(data.changes, data.price)}
       </td>
       <td>

@@ -26,7 +26,6 @@ export const refreshStocks = createAsyncThunk(
   async (ticker) => {
     const response = await getProfile(ticker);
     stockSlice.actions.updateStocks(response);
-    console.log(response);
     return response;
   },
 );

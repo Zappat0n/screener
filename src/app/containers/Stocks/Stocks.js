@@ -4,6 +4,7 @@ import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
 import Stock from '../Stock/Stock';
 import IndustryFilter from '../IndustryFilter/IndustryFilter';
 import { updateFilter } from '../../reducers/filterSlice';
+import './Stocks.css';
 
 const Stocks = () => {
   const components = useSelector((state) => state.stocks);
@@ -34,9 +35,9 @@ const Stocks = () => {
   };
 
   return (
-    <>
+    <div className="stocks">
       <IndustryFilter handleChange={changeFilter} />
-      <table className="stocks">
+      <table>
         <tr>
           <th>Name</th>
           <th>Price</th>
@@ -45,7 +46,7 @@ const Stocks = () => {
         </tr>
         {createStocks()}
       </table>
-    </>
+    </div>
   );
 };
 
