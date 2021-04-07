@@ -38,13 +38,17 @@ const Stocks = () => {
     <div className="stocks">
       <IndustryFilter handleChange={changeFilter} />
       <table>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Change</th>
-          <th>Industry</th>
-        </tr>
-        {createStocks()}
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Change</th>
+            <th>Industry</th>
+          </tr>
+        </thead>
+        <tbody>
+          {createStocks()}
+        </tbody>
       </table>
     </div>
   );
