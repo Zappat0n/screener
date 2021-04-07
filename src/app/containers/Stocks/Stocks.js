@@ -36,21 +36,23 @@ const Stocks = () => {
   };
 
   return (
-    <div className={`stocks ${filter.stocksVisible ? 'dFlex' : 'dNone'}`}>
-      <IndustryFilter handleChange={changeFilter} />
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Change</th>
-            <th>Industry</th>
-          </tr>
-        </thead>
-        <tbody>
-          {createStocks()}
-        </tbody>
-      </table>
+    <div className={filter.stocksVisible ? 'dFlex' : 'dNone'}>
+      <div className="stocks">
+        <IndustryFilter handleChange={changeFilter} />
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Change</th>
+              <th>Industry</th>
+            </tr>
+          </thead>
+          <tbody>
+            {createStocks()}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
