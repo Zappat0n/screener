@@ -3,19 +3,33 @@ import PropTypes from 'prop-types';
 
 const Stock = (props) => {
   const { ticker, handleClick } = props;
-  const selectName = useSelector((state) => state.stocks[ticker].name);
-  const selectPrice = useSelector((state) => state.stocks[ticker].price);
-  const selectChange = useSelector((state) => state.stocks[ticker].changesPercentage);
+  const data = useSelector((state) => (state.stocks[ticker] ? state.stocks[ticker] : ''));
+
+  const getPercentage = (change, price) => {
+    if (price !== '') {
+      return (change !== 0 ? `${(Math.round((change * 10000) / price) / 100)}%` : '0%');
+    }
+    return '';
+  };
 
   return (
-    <button type="button" onClick={(event) => handleClick(event, ticker)}>
-      {selectName}
-      :
-      {selectPrice}
-      {' '}
-      {selectChange}
-      %
-    </button>
+    <tr>
+      <td>
+        {data.companyName}
+      </td>
+      <td>
+        {data.price}
+      </td>
+      <td>
+        {getPercentage(data.changes, data.price)}
+      </td>
+      <td>
+        {data.industry}
+      </td>
+      <td>
+        <button type="button" onClick={(event) => handleClick(event, ticker)}>*</button>
+      </td>
+    </tr>
   );
 };
 

@@ -4,13 +4,24 @@ const Profile = () => {
   const data = useSelector((state) => (state.profile.data ? state.profile.data : ''));
 
   return (
-    <h4>
-      {data.companyName}
-      :
-      {data.price}
-      {' '}
-      {data.mktCap}
-    </h4>
+    <>
+      <p>
+        Name:
+        {data.companyName}
+      </p>
+      <p>
+        Price:
+        {data.price}
+      </p>
+      <p>
+        Industry:
+        {data.industry}
+      </p>
+      <p>
+        Market Cap:
+        {data.mktCap}
+      </p>
+    </>
   );
 };
 

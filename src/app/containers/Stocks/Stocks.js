@@ -27,7 +27,15 @@ const Stocks = () => {
 
   return (
     <>
-      {createStocks()}
+      <table className="stocks">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Change</th>
+          <th>Industry</th>
+        </tr>
+        {createStocks()}
+      </table>
     </>
   );
 };
