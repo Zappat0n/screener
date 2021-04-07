@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Index from '../Index/Index';
 import { clearStocks, refreshStocks, updateStocks } from '../../reducers/stockSlice';
 import indexComponents from '../../data/components';
+import './Indexes.css';
 
 const Indexes = () => {
   const components = useSelector((state) => state.indexes);
@@ -28,9 +29,9 @@ const Indexes = () => {
   };
 
   return (
-    <>
+    <div className="indexes">
       {createIndexes()}
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import './Index.css';
 
 const Index = (props) => {
   const { ticker, handleClick } = props;
@@ -8,19 +9,20 @@ const Index = (props) => {
   const selectChange = useSelector((state) => state.indexes[ticker].changesPercentage);
 
   return (
-    <button
-      type="button"
-      className="index"
-      onClick={(event) => handleClick(event, ticker)}
-    >
-      {selectName}
-      {' '}
-      :
-      {selectPrice}
-      {' '}
-      {selectChange}
-      %
-    </button>
+    <div className="index">
+      <button
+        type="button"
+        onClick={(event) => handleClick(event, ticker)}
+      >
+        {selectName}
+        <div className={selectChange < 0 ? 'backgroundRed' : 'backgroundBlue'}>
+          {selectPrice}
+          {' '}
+          {selectChange}
+          %
+        </div>
+      </button>
+    </div>
   );
 };
 

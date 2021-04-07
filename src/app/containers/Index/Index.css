@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+button {
+  background: white;
+  border: none;
+}
+
+.index button {
+  margin: 1rem;
+  border: 1px solid lightgray;
+  outline: none;
+  text-shadow: 0 0 1px #000;
+  box-shadow: 0 0 10px lightgray;
+  font: normal normal 600 1rem/2rem 'Open Sans', sans-serif;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background: lightgray;
+}
+
+.backgroundRed {
+  color: red;
+}
+
+.backgroundBlue {
+  color: blue;
+}
