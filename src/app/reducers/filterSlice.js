@@ -17,9 +17,13 @@ export const filterSlice = createSlice({
       // eslint-disable-next-line no-param-reassign
       state.stocksVisible = !state.stocksVisible;
     },
+    setVisible: (state) => {
+      // eslint-disable-next-line no-param-reassign
+      state.stocksVisible = true;
+    },
   },
 });
 
-export const { updateFilter, updateVisible } = filterSlice.actions;
+export const { setVisible, updateFilter, updateVisible } = filterSlice.actions;
 
 export default filterSlice.reducer;
