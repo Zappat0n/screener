@@ -24,15 +24,15 @@ const Stocks = () => {
   const createStocks = () => {
     if (components) {
       return Object.keys(components).filter((quote) => (
-        components[quote].industry === filter.value || filter.value === 'All')).map(
+        components[quote].sector === filter.value || filter.value === 'All')).map(
         (quote) => <Stock key={quote} ticker={quote} handleClick={getProfile} />,
       );
     }
     return [];
   };
 
-  const changeFilter = (industry) => {
-    dispatch(updateFilter(industry));
+  const changeFilter = (sector) => {
+    dispatch(updateFilter(sector));
   };
 
   return (

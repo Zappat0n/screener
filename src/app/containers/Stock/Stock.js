@@ -38,7 +38,7 @@ const Stock = (props) => {
         {getCell(getPercentage(data.changes, data.price))}
       </td>
       <td>
-        {getCell(data.industry)}
+        {getCell(data.sector)}
       </td>
     </tr>
   );

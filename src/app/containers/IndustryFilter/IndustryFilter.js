@@ -9,8 +9,8 @@ const IndustryFilter = (props) => {
 
   const createFilters = () => {
     Object.values(stocks).forEach((data) => {
-      if (!filters.includes(data.industry)) {
-        filters.push(data.industry);
+      if (!filters.includes(data.sector)) {
+        filters.push(data.sector);
       }
     });
   };
@@ -19,15 +19,15 @@ const IndustryFilter = (props) => {
   return (
     <div className="filter">
       <div className="content">
-        Industry:
+        Sector:
         {'  '}
         <select
           className="industry-filter"
           onChange={(event) => handleChange(event.target.value)}
         >
-          {filters.map((industry) => (
-            <option key={industry} value={industry}>
-              {industry}
+          {filters.map((sector) => (
+            <option key={sector} value={sector}>
+              {sector}
             </option>
           ))}
         </select>
