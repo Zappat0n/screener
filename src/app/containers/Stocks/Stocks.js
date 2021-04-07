@@ -1,10 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { unwrapResult } from '@reduxjs/toolkit';
-import Stock from '../Stock/Stock';
 import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
+import Stock from '../Stock/Stock';
+import IndustryFilter from '../IndustryFilter/IndustryFilter';
+import { updateFilter } from '../../reducers/filterSlice';
 
 const Stocks = () => {
   const components = useSelector((state) => state.stocks);
+  const filter = useSelector((state) => state.filter.value);
   const dispatch = useDispatch();
 
   const getProfile = (event, ticker) => {
@@ -18,15 +21,21 @@ const Stocks = () => {
 
   const createStocks = () => {
     if (components) {
-      return Object.keys(components).map(
+      return Object.keys(components).filter((quote) => (
+        components[quote].industry === filter || filter === 'All')).map(
         (quote) => <Stock key={quote} ticker={quote} handleClick={getProfile} />,
       );
     }
     return [];
   };
 
+  const changeFilter = (industry) => {
+    dispatch(updateFilter(industry));
+  };
+
   return (
     <>
+      <IndustryFilter handleChange={changeFilter} />
       <table className="stocks">
         <tr>
           <th>Name</th>
