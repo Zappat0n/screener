@@ -13,7 +13,6 @@ export const indexSlice = createSlice({
   initialState,
   reducers: {
     clearIndexes: (state) => {
-      // eslint-disable-next-line no-param-reassign
       Object.keys(state).forEach((key) => delete state[key]);
     },
     updateQuote: (state, action) => {
