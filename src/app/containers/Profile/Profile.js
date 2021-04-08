@@ -40,7 +40,7 @@ const Profile = () => {
           </div>
           <div className="row">
             <div className="cell">
-              <div>52 Week Rage</div>
+              <div>52 Week Range</div>
               <div>
                 {data.range}
               </div>

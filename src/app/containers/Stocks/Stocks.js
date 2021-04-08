@@ -45,7 +45,7 @@ const Stocks = () => {
               <th>Name</th>
               <th>Price</th>
               <th>Change</th>
-              <th>Industry</th>
+              <th>Sector</th>
             </tr>
           </thead>
           <tbody>
