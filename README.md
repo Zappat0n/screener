@@ -40,7 +40,7 @@ If you click on any Index component you will get additional information about th
 
 ## Live Demo
 
-[Live Demo Link](https://magic-bookstore111.herokuapp.com/)
+[Live Demo Link](https://zappat0n.github.io/screener/)
 
 ## Getting Started
 
