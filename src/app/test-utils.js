@@ -27,6 +27,14 @@ const initialState = {
       changes: 1,
       sector: 'Technology',
     },
+    MSFT: {
+      price: 110,
+      companyName: 'Microsoft',
+    },
+    GOOG: {
+      price: 120,
+      companyName: 'Google',
+    },
   },
   profile: {
     data: {
