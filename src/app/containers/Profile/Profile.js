@@ -3,6 +3,7 @@ import { unwrapResult } from '@reduxjs/toolkit';
 import { Link, useParams } from 'react-router-dom';
 import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
 import './Profile.css';
+import ProfileRow from '../../components/ProfileRow';
 
 const Profile = () => {
   const { id } = useParams();
@@ -41,69 +42,14 @@ const Profile = () => {
           </h5>
         </div>
         <div className="priceData">
-          <div className="row">
-            <div className="cell">
-              <div>Previous close</div>
-              <div>
-                {Math.round((data.price - data.changes) * 100) / 100}
-              </div>
-            </div>
-            <div className="cell">
-              <div>Market Cap</div>
-              <div>{data.mktCap}</div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="cell">
-              <div>52 Week Range</div>
-              <div>
-                {data.range}
-              </div>
-            </div>
-            <div className="cell">
-              <div>Beta</div>
-              <div>{data.beta}</div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="cell">
-              <div>Dividend Yield</div>
-              <div>
-                {`${Math.round((data.lastDiv * 10000) / data.price) / 100}%`}
-              </div>
-            </div>
-            <div className="cell">
-              <div>DCF</div>
-              <div>{data.dcf}</div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="cell">
-              <div>Exchange</div>
-              <div>
-                {data.exchangeShortName}
-              </div>
-            </div>
-            <div className="cell">
-              <div>Country</div>
-              <div>{data.country}</div>
-            </div>
-          </div>
+          <ProfileRow title1="Previous close" data1={(Math.round((data.price - data.changes) * 100) / 100).toString()} title2="Market Cap" data2={data.mktCap} />
+          <ProfileRow title1="52 Week Range" data1={data.range} title2="Beta" data2={data.beta} />
+          <ProfileRow title1="Dividend Yield" data1={`${Math.round((data.lastDiv * 10000) / data.price) / 100}%`} title2="DCF" data2={data.dcf} />
+          <ProfileRow title1="Exchange" data1={data.exchangeShortName} title2="Country" data2={data.country} />
         </div>
         <div className="info">
           <h3>Company Information</h3>
-          <div className="row">
-            <div className="cell">
-              <div>Sector:</div>
-              <div>
-                {data.sector}
-              </div>
-            </div>
-            <div className="cell">
-              <div>Industry:</div>
-              <div>{data.industry}</div>
-            </div>
-          </div>
+          <ProfileRow title1="Sector:" data1={data.sector} title2="Industry:" data2={data.industry} />
           <h4>CEO</h4>
           <p>{data.ceo}</p>
           <h4>Website</h4>
