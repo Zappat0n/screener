@@ -21,6 +21,17 @@ const initialState = {
       sector: 'Technology',
     },
   },
+  profile: {
+    data: {
+      image: '',
+      companyName: 'Microsoft',
+      price: 100,
+      changes: 1,
+      mktCap: 1000000,
+      range: '0-100',
+      country: 'US',
+    },
+  },
 };
 
 const renderComponent = (component) => render(
