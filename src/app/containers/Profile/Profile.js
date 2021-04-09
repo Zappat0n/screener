@@ -23,10 +23,12 @@ const Profile = () => {
     initialize();
   }
 
+  const checkType = (data) => ((!data || typeof data === 'string') ? data : data.toString());
+
   return (
     <div className="profile">
       <div className="content">
-        <Link key={index} to={`/index/${index}`} className="link">
+        <Link key={index} to={`/index/${index || ''}`} className="link">
           Go Back
         </Link>
         <div className="top">
@@ -42,9 +44,9 @@ const Profile = () => {
           </h5>
         </div>
         <div className="priceData">
-          <ProfileRow title1="Previous close" data1={(Math.round((data.price - data.changes) * 100) / 100).toString()} title2="Market Cap" data2={data.mktCap} />
-          <ProfileRow title1="52 Week Range" data1={data.range} title2="Beta" data2={data.beta} />
-          <ProfileRow title1="Dividend Yield" data1={`${Math.round((data.lastDiv * 10000) / data.price) / 100}%`} title2="DCF" data2={data.dcf} />
+          <ProfileRow title1="Previous close" data1={(Math.round((data.price - data.changes) * 100) / 100).toString()} title2="Market Cap" data2={checkType(data.mktCap)} />
+          <ProfileRow title1="52 Week Range" data1={data.range} title2="Beta" data2={checkType(data.beta)} />
+          <ProfileRow title1="Dividend Yield" data1={`${Math.round((data.lastDiv * 10000) / data.price) / 100}%`} title2="DCF" data2={checkType(data.dcf)} />
           <ProfileRow title1="Exchange" data1={data.exchangeShortName} title2="Country" data2={data.country} />
         </div>
         <div className="info">
