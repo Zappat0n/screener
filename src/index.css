@@ -38,3 +38,14 @@ body {
   color: black;
   cursor: pointer;
 }
+
+.errors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 0 10px lightgray;
+}

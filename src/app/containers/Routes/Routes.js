@@ -7,6 +7,7 @@ import Profile from '../Profile/Profile';
 const Routes = () => (
   <BrowserRouter>
     <header>
+      <div className="errors" />
       <Indexes />
     </header>
     <Switch>

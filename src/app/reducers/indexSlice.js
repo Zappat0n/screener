@@ -20,10 +20,12 @@ export const indexSlice = createSlice({
       state[action.payload[0].symbol] = action.payload[0];
     },
     updateIndexes: (state, action) => {
-      action.payload.forEach((index) => {
-        const { symbol } = index;
-        state[symbol.substr(1, symbol.length - 1)] = index;
-      });
+      if (action.payload) {
+        action.payload.forEach((index) => {
+          const { symbol } = index;
+          state[symbol.substr(1, symbol.length - 1)] = index;
+        });
+      }
     },
   },
 });
