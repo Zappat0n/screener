@@ -3,9 +3,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getQuote } from '../api/queries';
 
 const initialState = {
-  '^GSPC': { name: 'S&P 500', price: '' },
-  '^NDX': { name: 'NASDAQ 100', price: '' },
-  '^STOXX50E': { name: 'ESTX 50 PR.EUR', price: '' },
+  GSPC: { name: 'S&P 500', price: '' },
+  NDX: { name: 'NASDAQ 100', price: '' },
+  STOXX50E: { name: 'ESTX 50 PR.EUR', price: '' },
 };
 
 export const indexSlice = createSlice({

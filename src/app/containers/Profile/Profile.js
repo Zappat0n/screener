@@ -4,11 +4,9 @@ import './Profile.css';
 
 const Profile = () => {
   const data = useSelector((state) => (state.profile.data ? state.profile.data : ''));
-  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
-
   return (
-    <div className={`profile ${filter.stocksVisible ? 'dNone' : 'dFlex'}`}>
+    <>
       <div className="content">
         <button type="button" onClick={() => dispatch(updateVisible())}>
           Go Back
@@ -97,7 +95,7 @@ const Profile = () => {
           <p>{data.description}</p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -18,6 +18,10 @@ export const stockSlice = createSlice({
         state[stock.symbol] = stock;
       });
     },
+    setIndex: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
+      state.index = action.payload;
+    },
   },
 });
 
@@ -30,6 +34,6 @@ export const refreshStocks = createAsyncThunk(
   },
 );
 
-export const { clearStocks, updateStocks } = stockSlice.actions;
+export const { clearStocks, setIndex, updateStocks } = stockSlice.actions;
 
 export default stockSlice.reducer;
