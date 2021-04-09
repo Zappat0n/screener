@@ -13,6 +13,13 @@ const rootReducer = combineReducers({
 });
 
 const initialState = {
+  indexes: {
+    GSPC: {
+      name: 'S&P 500',
+      price: 4000,
+      changesPercentage: 2,
+    },
+  },
   stocks: {
     AAPL: {
       price: 100,
