@@ -21,7 +21,8 @@ export const indexSlice = createSlice({
     },
     updateIndexes: (state, action) => {
       action.payload.forEach((index) => {
-        state[index.symbol] = index;
+        const { symbol } = index;
+        state[symbol.substr(1, symbol.length - 1)] = index;
       });
     },
   },

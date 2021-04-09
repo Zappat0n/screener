@@ -1,10 +1,22 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { unwrapResult } from '@reduxjs/toolkit';
 import Index from '../Index/Index';
+import { refreshIndexes, updateIndexes } from '../../reducers/indexSlice';
 import './Indexes.css';
 
 const Indexes = () => {
+  const indexes = useSelector((state) => state.indexes);
   const components = useSelector((state) => state.indexes);
+  const dispatch = useDispatch();
+
+  if (indexes.GSPC.price === '') {
+    dispatch(refreshIndexes(Object.keys(indexes).map((value) => `^${value}`).join(',')))
+      .then(unwrapResult)
+      .then((originalPromiseResult) => {
+        dispatch(updateIndexes(originalPromiseResult));
+      });
+  }
 
   const createIndexes = () => {
     if (components) {
