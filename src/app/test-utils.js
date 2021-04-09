@@ -19,6 +19,14 @@ const initialState = {
       price: 4000,
       changesPercentage: 2,
     },
+    NDX: {
+      name: 'NASDAQ 100',
+      price: 1000,
+    },
+    STOXX50E: {
+      name: 'ESTX 50 PR.EUR',
+      price: 3000,
+    },
   },
   stocks: {
     AAPL: {
