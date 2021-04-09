@@ -18,11 +18,11 @@ body {
 }
 
 .colorRed {
-  color: red;
+  color: red !important;
 }
 
 .colorBlue {
-  color: blue;
+  color: blue !important;
 }
 
 .dNone {
@@ -31,4 +31,10 @@ body {
 
 .dFlex {
   display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
