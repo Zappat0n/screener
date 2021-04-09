@@ -3,7 +3,7 @@ import { unwrapResult } from '@reduxjs/toolkit';
 import { useParams } from 'react-router-dom';
 import Stock from '../Stock/Stock';
 import IndustryFilter from '../IndustryFilter/IndustryFilter';
-import { setVisible, updateFilter } from '../../reducers/filterSlice';
+import { updateFilter } from '../../reducers/filterSlice';
 import {
   clearStocks, refreshStocks, setIndex, updateStocks,
 } from '../../reducers/stockSlice';
@@ -18,10 +18,9 @@ const Stocks = () => {
   const dispatch = useDispatch();
 
   const initialize = () => {
+    dispatch(updateFilter('All'));
     dispatch(clearStocks());
     dispatch(setIndex(id));
-    dispatch(setVisible());
-    dispatch(updateFilter('All'));
     dispatch(refreshStocks(indexComponents[id].join(',')))
       .then(unwrapResult)
       .then((originalPromiseResult) => {

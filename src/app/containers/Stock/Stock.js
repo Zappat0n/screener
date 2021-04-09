@@ -16,8 +16,8 @@ const Stock = (props) => {
 
   const getColor = () => (data && data.changes < 0 ? 'colorRed' : 'colorBlue');
 
-  const getCell = (text) => (
-    <Link key={ticker} to={`/stock/${ticker}`} className="link">
+  const getCell = (text, colored = false) => (
+    <Link key={ticker} to={`/stock/${ticker}`} className={`link ${(colored ? getColor() : '')}`}>
       {text}
     </Link>
   );
@@ -30,8 +30,8 @@ const Stock = (props) => {
       <td>
         {getCell(data.price)}
       </td>
-      <td className={`change ${getColor()}`}>
-        {getCell(getPercentage(data.changes, data.price))}
+      <td>
+        {getCell(getPercentage(data.changes, data.price), true)}
       </td>
       <td>
         {getCell(data.sector)}

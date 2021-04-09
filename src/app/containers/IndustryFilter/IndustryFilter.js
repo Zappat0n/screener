@@ -9,7 +9,7 @@ const IndustryFilter = (props) => {
 
   const createFilters = () => {
     Object.values(stocks).forEach((data) => {
-      if (!filters.includes(data.sector)) {
+      if (data.sector && !filters.includes(data.sector)) {
         filters.push(data.sector);
       }
     });

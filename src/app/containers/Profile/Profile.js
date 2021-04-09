@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { unwrapResult } from '@reduxjs/toolkit';
 import { Link, useParams } from 'react-router-dom';
-import { updateVisible } from '../../reducers/filterSlice';
 import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
 import './Profile.css';
 
@@ -12,7 +11,6 @@ const Profile = () => {
   const dispatch = useDispatch();
 
   const initialize = () => {
-    dispatch(updateVisible());
     dispatch(refreshProfile(id))
       .then(unwrapResult)
       .then((originalPromiseResult) => {
