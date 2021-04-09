@@ -1,16 +1,35 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { unwrapResult } from '@reduxjs/toolkit';
+import { Link, useParams } from 'react-router-dom';
 import { updateVisible } from '../../reducers/filterSlice';
+import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
 import './Profile.css';
 
 const Profile = () => {
+  const { id } = useParams();
   const data = useSelector((state) => (state.profile.data ? state.profile.data : ''));
+  const index = useSelector((state) => state.stocks.index);
   const dispatch = useDispatch();
+
+  const initialize = () => {
+    dispatch(updateVisible());
+    dispatch(refreshProfile(id))
+      .then(unwrapResult)
+      .then((originalPromiseResult) => {
+        dispatch(updateProfile(originalPromiseResult));
+      });
+  };
+
+  if (data.symbol !== id) {
+    initialize();
+  }
+
   return (
-    <>
+    <div className="profile">
       <div className="content">
-        <button type="button" onClick={() => dispatch(updateVisible())}>
+        <Link key={index} to={`/index/${index}`} className="link">
           Go Back
-        </button>
+        </Link>
         <div className="top">
           <img className="logo" src={data.image} alt="logo" />
           <h2>
@@ -95,7 +114,7 @@ const Profile = () => {
           <p>{data.description}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,10 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { unwrapResult } from '@reduxjs/toolkit';
 import { useParams } from 'react-router-dom';
-import { refreshProfile, updateProfile } from '../../reducers/profileSlice';
 import Stock from '../Stock/Stock';
 import IndustryFilter from '../IndustryFilter/IndustryFilter';
-import { setVisible, updateFilter, updateVisible } from '../../reducers/filterSlice';
+import { setVisible, updateFilter } from '../../reducers/filterSlice';
 import {
   clearStocks, refreshStocks, setIndex, updateStocks,
 } from '../../reducers/stockSlice';
@@ -34,21 +33,11 @@ const Stocks = () => {
     initialize();
   }
 
-  const getProfile = (event, ticker) => {
-    event.preventDefault();
-    dispatch(updateVisible());
-    dispatch(refreshProfile(ticker))
-      .then(unwrapResult)
-      .then((originalPromiseResult) => {
-        dispatch(updateProfile(originalPromiseResult));
-      });
-  };
-
   const createStocks = () => {
     if (components) {
       return Object.keys(components).filter((quote) => (
         (components[quote].sector === filter.value || filter.value === 'All')) && quote !== 'index').map(
-        (quote) => <Stock key={quote} ticker={quote} handleClick={getProfile} />,
+        (quote) => <Stock key={quote} ticker={quote} />,
       );
     }
     return [];

@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Stock.css';
 
 const Stock = (props) => {
-  const { ticker, handleClick } = props;
+  const { ticker } = props;
   const data = useSelector((state) => (state.stocks[ticker] ? state.stocks[ticker] : ''));
 
   const getPercentage = (change, price) => {
@@ -16,14 +17,9 @@ const Stock = (props) => {
   const getColor = () => (data && data.changes < 0 ? 'colorRed' : 'colorBlue');
 
   const getCell = (text) => (
-    <div
-      className="cell"
-      onClick={(event) => handleClick(event, ticker)}
-      onKeyPress={(event) => handleClick(event, ticker)}
-      role="presentation"
-    >
+    <Link key={ticker} to={`/stock/${ticker}`} className="link">
       {text}
-    </div>
+    </Link>
   );
 
   return (
@@ -46,7 +42,6 @@ const Stock = (props) => {
 
 Stock.propTypes = {
   ticker: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
 };
 
 export default Stock;
