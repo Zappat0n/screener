@@ -1,0 +1,12 @@
+.stock {
+  font: normal normal 400 1rem/1rem 'Open Sans', sans-serif;
+}
+
+.stock:hover {
+  background: lightgray;
+}
+
+.stock .price,
+.stock .change {
+  text-align: right;
+}

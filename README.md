@@ -1,44 +1,97 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Available Scripts
+# Stock screener
 
-In the project directory, you can run:
+![Top Page Screenshot](./src/assets/screenshot.png)
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Live Demo](#live-demo)
+- [Getting Started](#getting-started)
+- [Testing](#testing)
+- [Authors](#authors)
+- [Contributing](#contributing)
+- [Show your support](#show-your-support)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## About the Project
 
-### `yarn test`
+Stock screener built using [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This screener connects to [Financial Modeling Prep](https://financialmodelingprep.com/) API to get financial information.
+You will be able to see the current level of the S&P 500, the NASDAQ , and the EUROSTOXX 50.
 
-### `yarn build`
+You can click on each Index and get information about the current price of the biggest index components by market cap.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you select a sector the components of the Index will be filtered.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+If you click on any Index component you will get additional information about that company.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `yarn eject`
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Node package manager](https://www.npmjs.com/)
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://www.w3schools.com/Css/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Live Demo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Live Demo Link](https://zappat0n.github.io/screener/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Getting Started
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To get a local copy up and running follow these simple example steps.
 
-## Learn More
+1. On the project GitHub page, navigate to the main page of the repository.
+2. Under the repository name, locate and click on a green button named `Code`.
+3. Copy the project URL as displayed.
+4. If you're running the Windows Operating System, open your command prompt. On Linux, Open your terminal.
+5. Change the current working directory to the location where you want the cloned directory to be made. Leave as it is if the current location is where you want the project to be.
+6. Type git clone, and then paste the URL you copied in Step 3. <br>
+   e.g. $ `git clone https://github.com/Zappat0n/screener.git`
+7. Press Enter. Your local copy will be created.
+8. On your console, move to the place where this folder is cloned
+9. Get an API key from [Financial Modeling Prep](https://financialmodelingprep.com/developer)
+10. Create a file named `.env` in the root folder of the application with this line `REACT_APP_API_KEY=[key from previous step]`
+11. Run `npm start`, then server is automatically opened
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To test the project you just need to run `npm run test`.
+
+## Authors
+
+👤 **Angel Barros**
+
+- GitHub: [@Zappat0n](https://github.com/Zappat0n)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/angel-barros/)
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues).
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## License
+
+This project is [MIT](./LICENSE) licensed.
+
+## Acknowledgements
+
+- [Financial Modeling Prep](https://financialmodelingprep.com/developer)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)

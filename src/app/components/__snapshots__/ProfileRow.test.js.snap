@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileRow Match SnapShot 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="cell"
+  >
+    <div>
+      Name
+    </div>
+    <div>
+      Me
+    </div>
+  </div>
+  <div
+    className="cell"
+  >
+    <div>
+      Sector
+    </div>
+    <div>
+      Mine
+    </div>
+  </div>
+</div>
+`;

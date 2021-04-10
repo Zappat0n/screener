@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Match SnapShot 1`] = `
+<div
+  className="profile"
+>
+  <div
+    className="content"
+  >
+    <a
+      className="link"
+      href="/index/"
+      onClick={[Function]}
+    >
+      Go Back
+    </a>
+    <div
+      className="top"
+    >
+      <img
+        alt="logo"
+        className="logo"
+        src=""
+      />
+      <h2>
+        Microsoft
+      </h2>
+      <h4>
+        100
+      </h4>
+      <h5
+        className="colorBlue"
+      >
+        1
+      </h5>
+    </div>
+    <div
+      className="priceData"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="cell"
+        >
+          <div>
+            Previous close
+          </div>
+          <div>
+            99
+          </div>
+        </div>
+        <div
+          className="cell"
+        >
+          <div>
+            Market Cap
+          </div>
+          <div>
+            1000000
+          </div>
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="cell"
+        >
+          <div>
+            52 Week Range
+          </div>
+          <div>
+            0-100
+          </div>
+        </div>
+        <div
+          className="cell"
+        >
+          <div>
+            Beta
+          </div>
+          <div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="cell"
+        >
+          <div>
+            Dividend Yield
+          </div>
+          <div>
+            NaN%
+          </div>
+        </div>
+        <div
+          className="cell"
+        >
+          <div>
+            DCF
+          </div>
+          <div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="cell"
+        >
+          <div>
+            Exchange
+          </div>
+          <div>
+            
+          </div>
+        </div>
+        <div
+          className="cell"
+        >
+          <div>
+            Country
+          </div>
+          <div>
+            US
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="info"
+    >
+      <h3>
+        Company Information
+      </h3>
+      <div
+        className="row"
+      >
+        <div
+          className="cell"
+        >
+          <div>
+            Sector:
+          </div>
+          <div>
+            
+          </div>
+        </div>
+        <div
+          className="cell"
+        >
+          <div>
+            Industry:
+          </div>
+          <div>
+            
+          </div>
+        </div>
+      </div>
+      <h4>
+        CEO
+      </h4>
+      <p />
+      <h4>
+        Website
+      </h4>
+      <p />
+      <h4>
+        Description
+      </h4>
+      <p />
+    </div>
+  </div>
+</div>
+`;

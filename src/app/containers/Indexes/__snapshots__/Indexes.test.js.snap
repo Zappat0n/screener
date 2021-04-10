@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indexes Match SnapShot 1`] = `
+<div
+  className="indexes"
+>
+  <a
+    className="link"
+    href="/index/GSPC"
+    onClick={[Function]}
+  >
+    <div
+      className="index"
+    >
+      <button
+        type="button"
+      >
+        S&P 500
+        <div
+          className="colorBlue"
+        >
+          4000
+           
+          2
+          %
+        </div>
+      </button>
+    </div>
+  </a>
+  <a
+    className="link"
+    href="/index/NDX"
+    onClick={[Function]}
+  >
+    <div
+      className="index"
+    >
+      <button
+        type="button"
+      >
+        NASDAQ 100
+        <div
+          className="colorBlue"
+        >
+          1000
+           
+          %
+        </div>
+      </button>
+    </div>
+  </a>
+  <a
+    className="link"
+    href="/index/STOXX50E"
+    onClick={[Function]}
+  >
+    <div
+      className="index"
+    >
+      <button
+        type="button"
+      >
+        ESTX 50 PR.EUR
+        <div
+          className="colorBlue"
+        >
+          3000
+           
+          %
+        </div>
+      </button>
+    </div>
+  </a>
+</div>
+`;

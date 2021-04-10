@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stock Match SnapShot 1`] = `
+<table>
+  <tbody>
+    <tr
+      className="stock"
+    >
+      <td>
+        <a
+          className="link "
+          href="/stock/AAPL"
+          onClick={[Function]}
+        >
+          Apple Inc
+        </a>
+      </td>
+      <td>
+        <a
+          className="link "
+          href="/stock/AAPL"
+          onClick={[Function]}
+        >
+          100
+        </a>
+      </td>
+      <td>
+        <a
+          className="link colorBlue"
+          href="/stock/AAPL"
+          onClick={[Function]}
+        >
+          1%
+        </a>
+      </td>
+      <td>
+        <a
+          className="link "
+          href="/stock/AAPL"
+          onClick={[Function]}
+        >
+          Technology
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
