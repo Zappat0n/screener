@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stocks Match SnapShot 1`] = `
+<div
+  className="stocks"
+>
+  <div
+    className="filter"
+  >
+    <div
+      className="content"
+    >
+      Sector:
+        
+      <select
+        className="industry-filter"
+        onChange={[Function]}
+      >
+        <option
+          value="All"
+        >
+          All
+        </option>
+        <option
+          value="Technology"
+        >
+          Technology
+        </option>
+      </select>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Change
+        </th>
+        <th>
+          Sector
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="stock"
+      >
+        <td>
+          <a
+            className="link "
+            href="/stock/AAPL"
+            onClick={[Function]}
+          >
+            Apple Inc
+          </a>
+        </td>
+        <td>
+          <a
+            className="link "
+            href="/stock/AAPL"
+            onClick={[Function]}
+          >
+            100
+          </a>
+        </td>
+        <td>
+          <a
+            className="link colorBlue"
+            href="/stock/AAPL"
+            onClick={[Function]}
+          >
+            1%
+          </a>
+        </td>
+        <td>
+          <a
+            className="link "
+            href="/stock/AAPL"
+            onClick={[Function]}
+          >
+            Technology
+          </a>
+        </td>
+      </tr>
+      <tr
+        className="stock"
+      >
+        <td>
+          <a
+            className="link "
+            href="/stock/MSFT"
+            onClick={[Function]}
+          >
+            Microsoft
+          </a>
+        </td>
+        <td>
+          <a
+            className="link "
+            href="/stock/MSFT"
+            onClick={[Function]}
+          >
+            110
+          </a>
+        </td>
+        <td>
+          <a
+            className="link colorBlue"
+            href="/stock/MSFT"
+            onClick={[Function]}
+          >
+            NaN%
+          </a>
+        </td>
+        <td>
+          <a
+            className="link "
+            href="/stock/MSFT"
+            onClick={[Function]}
+          />
+        </td>
+      </tr>
+      <tr
+        className="stock"
+      >
+        <td>
+          <a
+            className="link "
+            href="/stock/GOOG"
+            onClick={[Function]}
+          >
+            Google
+          </a>
+        </td>
+        <td>
+          <a
+            className="link "
+            href="/stock/GOOG"
+            onClick={[Function]}
+          >
+            120
+          </a>
+        </td>
+        <td>
+          <a
+            className="link colorBlue"
+            href="/stock/GOOG"
+            onClick={[Function]}
+          >
+            NaN%
+          </a>
+        </td>
+        <td>
+          <a
+            className="link "
+            href="/stock/GOOG"
+            onClick={[Function]}
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

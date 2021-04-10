@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Match SnapShot 1`] = `
+<div
+  className="index"
+>
+  <button
+    type="button"
+  >
+    S&P 500
+    <div
+      className="colorBlue"
+    >
+      4000
+       
+      2
+      %
+    </div>
+  </button>
+</div>
+`;

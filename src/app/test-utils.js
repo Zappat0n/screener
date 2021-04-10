@@ -2,6 +2,7 @@ import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import indexReducer from './reducers/indexSlice';
 import stockReducer from './reducers/stockSlice';
@@ -65,5 +66,13 @@ const renderComponent = (component) => render(
   </Provider>,
 );
 
+const rendererForComponent = (component) => renderer.create(
+  <Provider store={createStore(rootReducer, initialState)}>
+    <BrowserRouter>
+      {component}
+    </BrowserRouter>
+  </Provider>,
+);
+
 export * from '@testing-library/react';
-export { renderComponent };
+export { renderComponent, rendererForComponent };
