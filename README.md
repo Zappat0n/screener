@@ -10,6 +10,7 @@
 - [Built With](#built-with)
 - [Live Demo](#live-demo)
 - [Getting Started](#getting-started)
+- [Testing](#testing)
 - [Authors](#authors)
 - [Contributing](#contributing)
 - [Show your support](#show-your-support)
@@ -58,6 +59,10 @@ To get a local copy up and running follow these simple example steps.
 9. Get an API key from [Financial Modeling Prep](https://financialmodelingprep.com/developer)
 10. Create a file named `.env` in the root folder of the application with this line `REACT_APP_API_KEY=[key from previous step]`
 11. Run `npm start`, then server is automatically opened
+
+## Getting Started
+
+To test the project you just need to run `npm run test`.
 
 ## Authors
 
