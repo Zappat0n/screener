@@ -22,7 +22,7 @@
 Stock screener built using [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
 
 This screener connects to [Financial Modeling Prep](https://financialmodelingprep.com/) API to get financial information.
-You will be able to see the current level of the S&P 500, the NASDAQ , and the EUROSTOXX 50.
+You will be able to see the current level of the S&P 500, the NASDAQ, and the EURO STOXX 50.
 
 You can click on each Index and get information about the current price of the biggest index components by market cap.
 
